@@ -2,38 +2,191 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the purpose of ngSPICE in the context of CMOS NAND and NOR gate design?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Simulation",
+        "b": "Synthesis",
+        "c": "Layout",
+        "d": "Verification"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "ngSPICE is primarily used for circuit simulation.",
+        "b": "Synthesis is the process of generating a circuit from a high-level description.",
+        "c": "Layout involves the physical arrangement of components on the chip.",
+        "d": "Verification ensures that the designed circuit functions as intended."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "In ngSPICE, how do you define a CMOS NAND gate using a subcircuit?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": ".subckt NAND2 A B Y",
+        "b": ".subckt NOR2 A B Y",
+        "c": ".subckt AND2 A B Y",
+        "d": ".subckt OR2 A B Y"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "The correct syntax for a NAND gate subcircuit in ngSPICE.",
+        "b": "This syntax is for a NOR gate, not a NAND gate.",
+        "c": "This syntax is for an AND gate, not a NAND gate.",
+        "d": "This syntax is for an OR gate, not a NAND gate."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the purpose of the 'X' keyword in ngSPICE code for subcircuits?",
+      "answers": {
+        "a": "Indicating a comment",
+        "b": "Defining a subcircuit",
+        "c": "Referring to a component instance",
+        "d": "Setting a parameter"
+      },
+      "explanations": {
+        "a": "The 'X' keyword is not used for comments in ngSPICE.",
+        "b": "Correct, 'X' is used to instantiate a subcircuit in the main circuit.",
+        "c": "The 'X' keyword is used for subcircuit instantiation, not component instances.",
+        "d": "Parameters are typically set using '.param' in ngSPICE."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How do you connect inputs and outputs to a subcircuit instance in ngSPICE?",
+      "answers": {
+        "a": "By using wires",
+        "b": "By specifying ports",
+        "c": "By using resistors",
+        "d": "By using capacitors"
+      },
+      "explanations": {
+        "a": "Connections are typically made through ports, not generic wires.",
+        "b": "Correct, inputs and outputs are connected through specified ports.",
+        "c": "Resistors are not used for connecting components in ngSPICE.",
+        "d": "Capacitors are not used for connecting components in ngSPICE."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the significance of the 'Y' in '.subckt NAND2 A B Y' in ngSPICE code?",
+      "answers": {
+        "a": "Input",
+        "b": "Output",
+        "c": "Power supply",
+        "d": "Ground reference"
+      },
+      "explanations": {
+        "a": "A and B are the inputs; 'Y' represents the output.",
+        "b": "Correct, 'Y' signifies the output of the subcircuit.",
+        "c": "Power supply is usually denoted by VDD or VSS in CMOS circuits.",
+        "d": "Ground reference is typically denoted by GND or 0 in ngSPICE."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In ngSPICE, how do you define the PMOS and NMOS transistors within a subcircuit for CMOS gates?",
+      "answers": {
+        "a": "P and N",
+        "b": "MOS and NMOS",
+        "c": "PMOS and NMOS",
+        "d": "P-Transistor and N-Transistor"
+      },
+      "explanations": {
+        "a": "The correct syntax for PMOS and NMOS transistors is 'P' and 'N' respectively.",
+        "b": "Incorrect syntax; use 'PMOS' and 'NMOS' for clarity.",
+        "c": "Correct, 'PMOS' and 'NMOS' are used to define the transistor types.",
+        "d": "Incorrect syntax; use 'PMOS' and 'NMOS' for clarity."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the purpose of the '.include' directive in ngSPICE?",
+      "answers": {
+        "a": "Including a subcircuit file",
+        "b": "Defining a parameter",
+        "c": "Setting up a simulation",
+        "d": "Declaring a voltage source"
+      },
+      "explanations": {
+        "a": "Correct, '.include' is used to include external subcircuit files.",
+        "b": "'.param' is used for defining parameters in ngSPICE.",
+        "c": "'.tran' or '.dc' is used for setting up simulations.",
+        "d": "'.voltage' or '.v' is used for declaring voltage sources."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What does the '.param' directive do in ngSPICE code?",
+      "answers": {
+        "a": "Defines subcircuits",
+        "b": "Includes external files",
+        "c": "Sets parameters",
+        "d": "Declares voltage sources"
+      },
+      "explanations": {
+        "a": "'.subckt' is used to define subcircuits, not '.param'.",
+        "b": "'.include' is used to include external files, not '.param'.",
+        "c": "Correct, '.param' is used to set parameters in ngSPICE code.",
+        "d": "'.voltage' or '.v' is used for declaring voltage sources."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the purpose of the '.options' directive in ngSPICE?",
+      "answers": {
+        "a": "Enabling graphical output",
+        "b": "Setting global simulation options",
+        "c": "Defining temperature parameters",
+        "d": "Configuring component tolerances"
+      },
+      "explanations": {
+        "a": "'.plot' is used for enabling graphical output in ngSPICE.",
+        "b": "Correct, '.options' is used for setting global simulation options.",
+        "c": "'.temp' is used for defining temperature parameters.",
+        "d": "'.tolerance' is used for configuring component tolerances."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "How do you specify the logic function for a CMOS NAND gate in ngSPICE?",
+      "answers": {
+        "a": "Using '.logic' directive",
+        "b": "Through '.func' statement",
+        "c": "Using '.gate' declaration",
+        "d": "By connecting transistors"
+      },
+      "explanations": {
+        "a": "'.logic' is not a valid directive for specifying logic functions in ngSPICE.",
+        "b": "'.func' is used for defining custom mathematical functions.",
+        "c": "'.gate' is not typically used for specifying logic functions in ngSPICE.",
+        "d": "Correct, the logic function is determined by how transistors are connected in the subcircuit."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "In ngSPICE, what is the role of the '.measure' directive?",
+      "answers": {
+        "a": "Defining subcircuit parameters",
+        "b": "Measuring circuit performance",
+        "c": "Setting up transient analysis",
+        "d": "Including external files"
+      },
+      "explanations": {
+        "a": "'.param' is used for defining subcircuit parameters, not '.measure'.",
+        "b": "Correct, '.measure' is used for measuring circuit performance in ngSPICE.",
+        "c": "'.tran' or '.transient' is used for setting up transient analysis.",
+        "d": "'.include' is used for including external files, not '.measure'."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
   ]
 }

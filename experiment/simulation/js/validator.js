@@ -284,7 +284,7 @@ export function isValid() {
     // mapping variables
     const variableMap = new Map();
     const variableSubcktMap = new Map();
-    let variableList = ["ptm_45nm.txt", "supply", "lmin", "wmin", "wp", convertToLowerCase(VolSrcName.value.trim()), convertToLowerCase(subcktName.value.trim()), convertToLowerCase(gateCallInstance.value.trim()), "a", "out", "V1", "vdd", "gnd"];
+    let variableList = ["ptm_45nm.txt", "supply", "lmin", "wmin", "wp", convertToLowerCase(VolSrcName.value.trim()), convertToLowerCase(subcktName.value.trim()), convertToLowerCase(gateCallInstance.value.trim()), "a", "b", "out", "V1", "vdd", "gnd"];
     let variableSubcktList = [convertToLowerCase(subcktName.value.trim()), convertToLowerCase(subcktIn1.value.trim()), convertToLowerCase(subcktIn2.value.trim()), convertToLowerCase(subcktOut.value.trim()), convertToLowerCase(pmos1Name.value.trim()), convertToLowerCase(pmos2Name.value.trim()), convertToLowerCase(nmos1Name.value.trim()), convertToLowerCase(nmos2Name.value.trim()), "vdd", "gnd", "wmin", "lmin"];
     let variables_regular = [VolSrcName, subcktName, gateCallInstance];
     let subcktVars = [subcktName, subcktIn1, subcktIn2, subcktOut, pmos1Name, nmos1Name, pmos2Name, nmos2Name];
