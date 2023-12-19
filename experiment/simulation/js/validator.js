@@ -284,10 +284,10 @@ export function isValid() {
     // mapping variables
     const variableMap = new Map();
     const variableSubcktMap = new Map();
-    let variableList = ["ptm_45nm.txt", "supply", "lmin", "wmin", "wp", convertToLowerCase(VolSrcName.value.trim()), convertToLowerCase(subcktName.value.trim()), convertToLowerCase(gateCallInstance.value.trim()), "a", "b", "out", "V1", "vdd", "gnd"];
-    let variableSubcktList = [convertToLowerCase(subcktName.value.trim()), convertToLowerCase(subcktIn1.value.trim()), convertToLowerCase(subcktIn2.value.trim()), convertToLowerCase(subcktOut.value.trim()), convertToLowerCase(pmos1Name.value.trim()), convertToLowerCase(pmos2Name.value.trim()), convertToLowerCase(nmos1Name.value.trim()), convertToLowerCase(nmos2Name.value.trim()), "vdd", "gnd", "wmin", "lmin"];
+    let variableList = ["ptm_45nm.txt", "supply", "lmin", "wmin", "wp", convertToLowerCase(VolSrcName.value.trim()), convertToLowerCase(subcktName.value.trim()), convertToLowerCase(gateCallInstance.value.trim()), "V1", "vdd", "gnd"];
+    let variableSubcktList = [convertToLowerCase(subcktName.value.trim()), convertToLowerCase(pmos1Name.value.trim()), convertToLowerCase(pmos2Name.value.trim()), convertToLowerCase(nmos1Name.value.trim()), convertToLowerCase(nmos2Name.value.trim()), "vdd", "gnd", "wmin", "lmin"];
     let variables_regular = [VolSrcName, subcktName, gateCallInstance];
-    let subcktVars = [subcktName, subcktIn1, subcktIn2, subcktOut, pmos1Name, nmos1Name, pmos2Name, nmos2Name];
+    let subcktVars = [subcktName, pmos1Name, nmos1Name, pmos2Name, nmos2Name];
 
     // Iterate over the variable list
     for (let variable in variableList) {
@@ -342,7 +342,36 @@ export function isValid() {
         printErrors(msg, VolSrcName);
         return false;
     }
-
+    if(gateCallInstance.value.trim()[0]!="x" && gateCallInstance.value.trim()[0]!="X")
+    {
+        let msg = "When instantiating a sub circuit, the name of the instance must always start with 'x' or 'X'"
+        printErrors(msg, gateCallInstance);
+        return false;
+    }
+    if(pmos1Name.value.trim()[0]!="m" && pmos1Name.value.trim()[0]!="M")
+    {
+        let msg = "When instantiating a MOSFET, the name of the instance must always start with 'm' or 'M'"
+        printErrors(msg, pmos1Name);
+        return false;
+    }
+    if(nmos1Name.value.trim()[0]!="m" && nmos1Name.value.trim()[0]!="M")
+    {
+        let msg = "When instantiating a MOSFET, the name of the instance must always start with 'm' or 'M'"
+        printErrors(msg, nmos1Name);
+        return false;
+    }
+    if(pmos2Name.value.trim()[0]!="m" && pmos2Name.value.trim()[0]!="M")
+    {
+        let msg = "When instantiating a MOSFET, the name of the instance must always start with 'm' or 'M'"
+        printErrors(msg, pmos2Name);
+        return false;
+    }
+    if(nmos2Name.value.trim()[0]!="m" && nmos2Name.value.trim()[0]!="M")
+    {
+        let msg = "When instantiating a MOSFET, the name of the instance must always start with 'm' or 'M'"
+        printErrors(msg, nmos2Name);
+        return false;
+    }
     return true;
 }
 
@@ -426,6 +455,12 @@ export function printObsTableNAND() {
     if (p1 !== true || p2 !== true || n1 !== true || n2 !== true) {
         correct = false;
     }
+
+    if(in1===in2 || in1===out || in2===out)
+    {
+        correct=false
+    }
+    
     // checking if voltage source declared correctly
     let volPos = document.getElementById("voltage-positive-terminal-selector");
     let volNeg = document.getElementById("voltage-negative-terminal-selector");
