@@ -1,0 +1,6 @@
+
+/home/runner/work/exp-schematic-transistor-nand-nor-gate-spice-code-iiith/exp-schematic-transistor-nand-nor-gate-spice-code-iiith/experiment/simulation/js/validator.js
+  405:9  warning  'gateCallInstance' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
