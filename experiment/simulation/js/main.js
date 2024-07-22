@@ -79,7 +79,6 @@ export function ValidateCode() {
         refreshObservations();
         if (isValid()) {
             refreshObservations();
-            // print success/failure message and report, waveforms
             if(window.selectedTab === 0)
                 printObsTableNAND();
             else
