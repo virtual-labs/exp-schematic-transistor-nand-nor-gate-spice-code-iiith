@@ -10,7 +10,7 @@ A NAND gate could be viewed as an AND gate with an inverter at the output.
 
 **SCHEMATIC OF NAND GATE**
 
-<img src="images/nand_schematic.jpg">
+<img src="images/nand_schematic.jpg" width="100">
 
 | Input A | Input B | Output |
 | ------- | ------- | ------ |
@@ -27,7 +27,7 @@ A NOR gate could be viewed as an OR gate with an inverter at the output.
 
 **SCHEMATIC OF NOR GATE**
 
-<img src="images/nor_schematic.jpg">
+<img src="images/nor_schematic.jpg" width="100">
 
 | Input A | Input B | Output |
 | ------- | ------- | ------ |
@@ -44,7 +44,7 @@ In the experiments we have done till now we have designed gates by arranging tra
 
 SPICE (Simulation Program with Integrated Circuit Emphasis) is a powerful program that is used in integrated circuit and board-level design to check the integrity of circuit designs and to predict circuit behavior. SPICE was originally developed at the Electronics Research Laboratory of the University of California, Berkeley (1975). Simulating the circuit with SPICE is the industry-standard way to verify circuit operation at the transistor level before committing to manufacturing an integrated circuit. In SPICE program, circuit elements (transistors, resistors, capacitors, etc) and their connections are translated into a text netlist.
 
-<img src="images/Exp7_Intro_Image.png">
+<img src="images/Exp7_Intro_Image.png" width="500">
 
 Several types of circuit analyses can be done using SPICE program. Here are the most important ones:
 
@@ -58,8 +58,6 @@ Several types of circuit analyses can be done using SPICE program. Here are the 
 - Monte Carlo Analysis
 
 All analyses can be done at different temperatures. The default temperature is 300K.
-
-## 3. SPICE Syntax and Commands
 
 ## 3. SPICE Syntax and Commands
 
@@ -81,7 +79,7 @@ Although these statements may appear in any order, it is recommended that they b
 
 (A).Independent DC Sources
 
-<img src="images/2.png">
+<img src="images/2.png" width="400">
 
 N1 is the positive terminal node. N2 is the negative terminal node. Type can be DC, AC or TRAN, depending on the type of analysis. Value gives the value of the source. The name of a voltage and current source must start with V and I, respectively.
 
@@ -224,52 +222,50 @@ First line of spice code is always a comment. So this line is always ignored by 
 
 **SWITCHING BEHAVIOUR OF TRANSISTOR**
 
-The gate of the MOS transistor controls the passage of the current between the drain and source.If the voltage at the gate is Vdd, no current flows between the drain and source of PMOS and same is the case with NMOS if its gate is grounded. This characteristic of MOS transistors, enables it to be viewed as a switch. The switching behaviour of nmos and pmos device is shown in the figure below. Here the input 0 indicates that the gate is grounded and input 1 indicates that Vdd is applied to the gate:
+The gate of the MOS transistor controls the passage of the current between the drain and source. If the voltage at the gate is VDD, no current flows between the drain and source of PMOS and same is the case with NMOS if its gate is grounded. This characteristic of MOS transistors enables it to be viewed as a switch. The switching behaviour of NMOS and PMOS devices is shown in the figures below. Here the input 0 indicates that the gate is grounded and input 1 indicates that VDD is applied to the gate:
 
-<img src="images/nmos_as_switch.jpg">
+<img src="images/nmos_as_switch.jpg" width="400">
 
-<img src="images/pmos_as_switch.jpg">
+<img src="images/pmos_as_switch.jpg" width="400">
 
 **SERIES AND PARALLEL CONNECTION**
 
 The transistor level schematic of any combinational logic can be obtained by placing two or more n/p-switches in series or parallel.
 
-If switches are connected in series then the composite switch hence constructed is closed when both the switches are closed. The series connection is shown in the figure below. The table indicates the states of the switch contructed by series connection depending on the inputs A and B
+If switches are connected in series then the composite switch hence constructed is closed when both the switches are closed. The series connection is shown in the figure below. The table indicates the states of the switch constructed by series connection depending on the inputs A and B:
 
-<img src="images/gen_series.jpg">
+<img src="images/gen_series.jpg" width="100">
 
 **Series connection of NMOS devices**
 
-<img src="images/table1.png">
+<img src="images/table1.png" width="100">
 
 **Series connection of PMOS devices**
 
-<img src="images/table2.png">
+<img src="images/table2.png" width="100">
 
-If the switches are connected in parallel then the composite switch hence constructed is closed when either or both of the switches are closed. The parallel connection is shown in the figure below. The table indicates the states of the switch obtained by parallel connection depending on the inputs A and B
+If the switches are connected in parallel then the composite switch hence constructed is closed when either or both of the switches are closed. The parallel connection is shown in the figure below. The table indicates the states of the switch obtained by parallel connection depending on the inputs A and B:
 
-**Parallel connection of NMOS devices**
-
-<img src="images/gen_parallel.jpg">
+<img src="images/gen_parallel.jpg" width="100">
 
 **Parallel connection of NMOS devices**
 
-<img src="images/table3.png">
+<img src="images/table3.png" width="100">
 
 **Parallel connection of PMOS devices**
 
-<img src="images/table4.png">
+<img src="images/table4.png" width="100">
 
 By using any combinations of the above constructions, CMOS combinational gates can be obtained. In the following section, Karnaugh maps for NAND and NOR have been used to determine the required combination
 
 **K-MAP FOR NAND**
 
-<img  src="images/theory_nand.jpg">
+<img src="images/theory_nand.jpg" width="500">
 
-Thus for NAND gate PMOS devices are connected in parallel between Vdd and output node, whereas the NMOS devices are in series between output node and ground.
+Thus for NAND gate PMOS devices are connected in parallel between VDD and output node, whereas the NMOS devices are in series between output node and ground.
 
 **K-MAP FOR NOR**
 
-<img  src="images/theory_nor.jpg">
+<img src="images/theory_nor.jpg" width="500">
 
-Thus for NOR gate PMOS devices are connected in series between Vdd and output node, whereas the NMOS devices are in parallel between output node and ground.
+Thus for NOR gate PMOS devices are connected in series between VDD and output node, whereas the NMOS devices are in parallel between output node and ground.
