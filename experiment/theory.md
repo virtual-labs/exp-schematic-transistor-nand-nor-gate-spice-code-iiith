@@ -1,5 +1,3 @@
-## Theory
-
 ## 1. NAND and NOR Gate Fundamentals
 
 **DEFINITION OF NAND GATE**
