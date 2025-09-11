@@ -1,4 +1,4 @@
-## 1. NAND and NOR Gate Fundamentals
+### 1. NAND and NOR Gate Fundamentals
 
 **DEFINITION OF NAND GATE**
 
@@ -34,7 +34,7 @@ A NOR gate could be viewed as an OR gate with an inverter at the output.
 | 1       | 0       | 0      |
 | 1       | 1       | 0      |
 
-## 2. Introduction to SPICE
+### 2. Introduction to SPICE
 
 In the experiments we have done till now we have designed gates by arranging transistors in various fashions. The simulation of these designs gave graphs of output voltages and we analyzed how these graphs change with varying different parameters of the transistor. Now when you place a transistor on screen there is a back end code which tells a simulator what are the points to which the transistor's substrate, gate, drain, source are connected. The language in which this information is conveyed is SPICE.
 
@@ -57,7 +57,7 @@ Several types of circuit analyses can be done using SPICE program. Here are the 
 
 All analyses can be done at different temperatures. The default temperature is 300K.
 
-## 3. SPICE Syntax and Commands
+### 3. SPICE Syntax and Commands
 
 **SPICE FILE STRUCTURE**
 
@@ -216,7 +216,7 @@ First line of spice code is always a comment. So this line is always ignored by 
 11. **.end**
     - Marks the end of the spice code.
 
-## 4. TRANSISTOR LEVEL NAND NOR GATES
+### 4. TRANSISTOR LEVEL NAND NOR GATES
 
 **SWITCHING BEHAVIOUR OF TRANSISTOR**
 
