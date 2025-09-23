@@ -1,0 +1,243 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the purpose of ngSPICE in the context of CMOS NAND and NOR gate design?",
+      "answers": {
+        "a": "Simulation",
+        "b": "Synthesis",
+        "c": "Layout",
+        "d": "Verification"
+      },
+      "explanations": {
+        "a": "Correct. ngSPICE is primarily used for circuit simulation.",
+        "b": "Incorrect. Synthesis is the process of generating a circuit from a high-level description, not the main purpose of ngSPICE.",
+        "c": "Incorrect. Layout involves the physical arrangement of components on the chip, not the main purpose of ngSPICE.",
+        "d": "Incorrect. Verification ensures that the designed circuit functions as intended, but ngSPICE is mainly for simulation."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In ngSPICE, how do you define a CMOS NAND gate using a subcircuit?",
+      "answers": {
+        "a": ".subckt NAND2 A B Y",
+        "b": ".subckt NOR2 A B Y",
+        "c": ".subckt AND2 A B Y",
+        "d": ".subckt OR2 A B Y"
+      },
+      "explanations": {
+        "a": "Correct. This is the correct syntax for a NAND gate subcircuit in ngSPICE.",
+        "b": "Incorrect. This syntax is for a NOR gate, not a NAND gate.",
+        "c": "Incorrect. This syntax is for an AND gate, not a NAND gate.",
+        "d": "Incorrect. This syntax is for an OR gate, not a NAND gate."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the purpose of the 'X' keyword in ngSPICE code for subcircuits?",
+      "answers": {
+        "a": "Indicating a comment",
+        "b": "Defining a subcircuit",
+        "c": "Referring to a component instance",
+        "d": "Setting a parameter"
+      },
+      "explanations": {
+        "a": "Incorrect. The 'X' keyword is not used for comments in ngSPICE.",
+        "b": "Correct. 'X' is used to instantiate a subcircuit in the main circuit.",
+        "c": "Incorrect. The 'X' keyword is used for subcircuit instantiation, not generic component instances.",
+        "d": "Incorrect. Parameters are typically set using '.param' in ngSPICE."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How do you connect inputs and outputs to a subcircuit instance in ngSPICE?",
+      "answers": {
+        "a": "By using wires",
+        "b": "By specifying ports",
+        "c": "By using resistors",
+        "d": "By using capacitors"
+      },
+      "explanations": {
+        "a": "Incorrect. Connections are typically made through ports, not generic wires.",
+        "b": "Correct. Inputs and outputs are connected through specified ports.",
+        "c": "Incorrect. Resistors are not used for connecting components in ngSPICE.",
+        "d": "Incorrect. Capacitors are not used for connecting components in ngSPICE."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the significance of the 'Y' in '.subckt NAND2 A B Y' in ngSPICE code?",
+      "answers": {
+        "a": "Input",
+        "b": "Output",
+        "c": "Power supply",
+        "d": "Ground reference"
+      },
+      "explanations": {
+        "a": "Incorrect. A and B are the inputs; 'Y' represents the output.",
+        "b": "Correct. 'Y' signifies the output of the subcircuit.",
+        "c": "Incorrect. Power supply is usually denoted by VDD or VSS in CMOS circuits.",
+        "d": "Incorrect. Ground reference is typically denoted by GND or 0 in ngSPICE."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In ngSPICE, how do you define the PMOS and NMOS transistors within a subcircuit for CMOS gates?",
+      "answers": {
+        "a": "P and N",
+        "b": "MOS and NMOS",
+        "c": "PMOS and NMOS",
+        "d": "P-Transistor and N-Transistor"
+      },
+      "explanations": {
+        "a": "Incorrect. The correct syntax for PMOS and NMOS transistors is 'PMOS' and 'NMOS' respectively.",
+        "b": "Incorrect. Use 'PMOS' and 'NMOS' for clarity, not 'MOS and NMOS'.",
+        "c": "Correct. 'PMOS' and 'NMOS' are used to define the transistor types.",
+        "d": "Incorrect. Use 'PMOS' and 'NMOS' for clarity, not 'P-Transistor and N-Transistor'."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the purpose of the '.include' directive in ngSPICE?",
+      "answers": {
+        "a": "Including a subcircuit file",
+        "b": "Defining a parameter",
+        "c": "Setting up a simulation",
+        "d": "Declaring a voltage source"
+      },
+      "explanations": {
+        "a": "Correct. '.include' is used to include external subcircuit files.",
+        "b": "Incorrect. '.param' is used for defining parameters in ngSPICE.",
+        "c": "Incorrect. '.tran' or '.dc' is used for setting up simulations.",
+        "d": "Incorrect. '.voltage' or '.v' is used for declaring voltage sources."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What does the '.param' directive do in ngSPICE code?",
+      "answers": {
+        "a": "Defines subcircuits",
+        "b": "Includes external files",
+        "c": "Sets parameters",
+        "d": "Declares voltage sources"
+      },
+      "explanations": {
+        "a": "Incorrect. '.subckt' is used to define subcircuits, not '.param'.",
+        "b": "Incorrect. '.include' is used to include external files, not '.param'.",
+        "c": "Correct. '.param' is used to set parameters in ngSPICE code.",
+        "d": "Incorrect. '.voltage' or '.v' is used for declaring voltage sources."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the purpose of the '.options' directive in ngSPICE?",
+      "answers": {
+        "a": "Enabling graphical output",
+        "b": "Setting global simulation options",
+        "c": "Defining temperature parameters",
+        "d": "Configuring component tolerances"
+      },
+      "explanations": {
+        "a": "Incorrect. '.plot' is used for enabling graphical output in ngSPICE.",
+        "b": "Correct. '.options' is used for setting global simulation options.",
+        "c": "Incorrect. '.temp' is used for defining temperature parameters.",
+        "d": "Incorrect. '.tolerance' is used for configuring component tolerances."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "How do you specify the logic function for a CMOS NAND gate in ngSPICE?",
+      "answers": {
+        "a": "Using '.logic' directive",
+        "b": "Through '.func' statement",
+        "c": "Using '.gate' declaration",
+        "d": "By connecting transistors"
+      },
+      "explanations": {
+        "a": "Incorrect. '.logic' is not a valid directive for specifying logic functions in ngSPICE.",
+        "b": "Incorrect. '.func' is used for defining custom mathematical functions, not logic functions.",
+        "c": "Incorrect. '.gate' is not typically used for specifying logic functions in ngSPICE.",
+        "d": "Correct. The logic function is determined by how transistors are connected in the subcircuit."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "In ngSPICE, what is the role of the '.measure' directive?",
+      "answers": {
+        "a": "Defining subcircuit parameters",
+        "b": "Measuring circuit performance",
+        "c": "Setting up transient analysis",
+        "d": "Including external files"
+      },
+      "explanations": {
+        "a": "Incorrect. '.param' is used for defining subcircuit parameters, not '.measure'.",
+        "b": "Correct. '.measure' is used for measuring circuit performance in ngSPICE.",
+        "c": "Incorrect. '.tran' or '.transient' is used for setting up transient analysis.",
+        "d": "Incorrect. '.include' is used for including external files, not '.measure'."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Which transistor configuration would you use to design a 2-input CMOS NAND gate in SPICE?",
+      "answers": {
+        "a": "Series NMOS, parallel PMOS",
+        "b": "Parallel NMOS, series PMOS",
+        "c": "Series NMOS, series PMOS",
+        "d": "Parallel NMOS, parallel PMOS"
+      },
+      "explanations": {
+        "a": "Correct. Series NMOS and parallel PMOS transistors are used for a 2-input CMOS NAND gate.",
+        "b": "Incorrect. This configuration is used for NOR gates, not NAND gates.",
+        "c": "Incorrect. Both series configurations do not produce NAND logic.",
+        "d": "Incorrect. Both parallel configurations do not produce NAND logic."
+      },
+      "correctAnswer": "a",
+      "difficulty": "design"
+    },
+    {
+      "question": "How would you modify the SPICE code to convert a NAND gate subcircuit into a NOR gate?",
+      "answers": {
+        "a": "Change NMOS to parallel and PMOS to series",
+        "b": "Swap input and output nodes",
+        "c": "Increase supply voltage",
+        "d": "Add more transistors"
+      },
+      "explanations": {
+        "a": "Correct. For a NOR gate, NMOS transistors are in parallel and PMOS transistors are in series.",
+        "b": "Incorrect. Swapping input and output nodes does not change the gate logic.",
+        "c": "Incorrect. Increasing supply voltage does not change the gate logic.",
+        "d": "Incorrect. Adding more transistors is not the direct way to convert NAND to NOR."
+      },
+      "correctAnswer": "a",
+      "difficulty": "design"
+    },
+    {
+      "question": "If a NAND gate output in SPICE simulation is always high, which design issue is most likely?",
+      "answers": {
+        "a": "NMOS transistors are always off",
+        "b": "PMOS transistors are always on",
+        "c": "Incorrect supply voltage",
+        "d": "Missing ground connection"
+      },
+      "explanations": {
+        "a": "Incorrect. If NMOS transistors are always off, output could be high, but check PMOS first.",
+        "b": "Correct. If PMOS transistors are always on, output will be stuck high regardless of inputs.",
+        "c": "Incorrect. Incorrect supply voltage may cause other issues, but not always stuck high output.",
+        "d": "Incorrect. Missing ground connection may cause undefined behavior, not specifically stuck high output."
+      },
+      "correctAnswer": "b",
+      "difficulty": "design"
+    }
+  ]
+}
