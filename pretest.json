@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the basic purpose of a NAND gate?",
+      "answers": {
+        "a": "Performs addition",
+        "b": "Performs multiplication",
+        "c": "Performs logical NAND operation",
+        "d": "Performs logical OR operation"
+      },
+      "explanations": {
+        "a": "Incorrect. NAND gates do not perform addition; they perform logical operations.",
+        "b": "Incorrect. NAND gates do not perform multiplication; they perform logical operations.",
+        "c": "Correct. NAND gates perform the logical NAND operation, which is the negation of AND.",
+        "d": "Incorrect. Logical OR operation is performed by OR gates, not NAND gates."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the Boolean expression for a NOR gate?",
+      "answers": {
+        "a": "A + B",
+        "b": "A * B",
+        "c": "A AND B",
+        "d": "NEG (A OR B)"
+      },
+      "explanations": {
+        "a": "Incorrect. 'A + B' is the Boolean expression for logical OR, not NOR.",
+        "b": "Incorrect. 'A * B' is the Boolean expression for logical AND, not NOR.",
+        "c": "Incorrect. 'A AND B' is the logical AND operation, not NOR.",
+        "d": "Correct. The Boolean expression for a NOR gate is NEG(A OR B), which means the output is true only when both inputs are false."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In SPICE code, what is the purpose of the '.OPTIONS' statement?",
+      "answers": {
+        "a": "Define circuit elements",
+        "b": "Set simulation options",
+        "c": "Create subcircuits",
+        "d": "Specify component values"
+      },
+      "explanations": {
+        "a": "Incorrect. Circuit elements are defined using other statements such as R, C, L, etc.",
+        "b": "Correct. The '.OPTIONS' statement is used to set simulation options, such as accuracy and convergence criteria.",
+        "c": "Incorrect. Subcircuits are defined using the '.SUBCKT' statement, not '.OPTIONS'.",
+        "d": "Incorrect. Component values are specified using the element statements, not '.OPTIONS'."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which SPICE directive is used to specify the DC operating point in a simulation?",
+      "answers": {
+        "a": ".TRAN",
+        "b": ".DC",
+        "c": ".OP",
+        "d": ".AC"
+      },
+      "explanations": {
+        "a": "Incorrect. .TRAN is used for transient analysis, not DC operating point.",
+        "b": "Incorrect. .DC is used for DC sweep analysis, not DC operating point.",
+        "c": "Correct. .OP is used to specify the DC operating point, which calculates the steady-state voltages and currents.",
+        "d": "Incorrect. .AC is used for AC analysis, not DC operating point."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the purpose of a pull-up resistor in a NAND gate circuit?",
+      "answers": {
+        "a": "To increase speed",
+        "b": "To provide logic inversion",
+        "c": "To prevent floating inputs",
+        "d": "To reduce power consumption"
+      },
+      "explanations": {
+        "a": "Incorrect. Pull-up resistors do not directly increase speed; they help maintain a defined logic level.",
+        "b": "Incorrect. Pull-up resistors are not used for logic inversion in NAND gates; inversion is done by the gate logic itself.",
+        "c": "Correct. Pull-up resistors prevent floating inputs in a NAND gate circuit, ensuring reliable operation.",
+        "d": "Incorrect. Pull-up resistors do not reduce power consumption; they may increase static power consumption."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the function of the '.IC' statement in SPICE code?",
+      "answers": {
+        "a": "Define initial conditions",
+        "b": "Specify component values",
+        "c": "Create subcircuits",
+        "d": "Set simulation options"
+      },
+      "explanations": {
+        "a": "Correct. The '.IC' statement is used to define initial conditions for voltages or currents in the circuit before simulation starts.",
+        "b": "Incorrect. Component values are specified using the element statements, not '.IC'.",
+        "c": "Incorrect. Subcircuits are defined using the '.SUBCKT' statement, not '.IC'.",
+        "d": "Incorrect. Simulation options are set using the '.OPTIONS' statement, not '.IC'."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In a NAND gate circuit, what is the purpose of a parallel resistor connected to the output?",
+      "answers": {
+        "a": "To increase speed",
+        "b": "To provide logic inversion",
+        "c": "To prevent floating inputs",
+        "d": "To reduce power consumption"
+      },
+      "explanations": {
+        "a": "Incorrect. Parallel resistors do not directly increase speed; they may affect output impedance.",
+        "b": "Incorrect. Parallel resistors are not used for logic inversion in NAND gates; inversion is done by the gate logic itself.",
+        "c": "Incorrect. Parallel resistors do not prevent floating inputs; pull-up or pull-down resistors do.",
+        "d": "Correct. Parallel resistors can be used to reduce power consumption by providing a discharge path for leakage currents."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which SPICE directive is used for transient analysis of a circuit?",
+      "answers": {
+        "a": ".TRAN",
+        "b": ".DC",
+        "c": ".OP",
+        "d": ".AC"
+      },
+      "explanations": {
+        "a": "Correct. .TRAN is used for transient analysis, which simulates the time-domain response of the circuit.",
+        "b": "Incorrect. .DC is used for DC sweep analysis, not transient analysis.",
+        "c": "Incorrect. .OP is used to specify the DC operating point, not transient analysis.",
+        "d": "Incorrect. .AC is used for AC analysis, not transient analysis."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the purpose of a feedback loop in the design of a NOR gate circuit?",
+      "answers": {
+        "a": "To increase speed",
+        "b": "To provide logic inversion",
+        "c": "To introduce hysteresis",
+        "d": "To amplify the output"
+      },
+      "explanations": {
+        "a": "Incorrect. Feedback loops do not directly increase speed; they are used for stability or hysteresis.",
+        "b": "Incorrect. Feedback loops are not used for logic inversion in NOR gates; inversion is done by the gate logic itself.",
+        "c": "Correct. A feedback loop introduces hysteresis in a NOR gate circuit, which can help with noise immunity and stability.",
+        "d": "Incorrect. Feedback loops do not amplify the output in digital circuits; amplification is done by amplifiers."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+
+/home/runner/work/exp-schematic-transistor-nand-nor-gate-spice-code-iiith/exp-schematic-transistor-nand-nor-gate-spice-code-iiith/experiment/simulation/js/validator.js
+   420:7   warning  'alternateNorCorrect' is assigned a value but never used  no-unused-vars
+   447:7   warning  'gateCallInstance' is assigned a value but never used     no-unused-vars
+   691:16  warning  Unnecessary escape character: \"                          no-useless-escape
+   691:27  warning  Unnecessary escape character: \"                          no-useless-escape
+   716:16  warning  Unnecessary escape character: \"                          no-useless-escape
+   716:27  warning  Unnecessary escape character: \"                          no-useless-escape
+   718:16  warning  Unnecessary escape character: \"                          no-useless-escape
+   718:27  warning  Unnecessary escape character: \"                          no-useless-escape
+   720:16  warning  Unnecessary escape character: \"                          no-useless-escape
+   720:41  warning  Unnecessary escape character: \"                          no-useless-escape
+   720:50  warning  Unnecessary escape character: \"                          no-useless-escape
+   720:67  warning  Unnecessary escape character: \"                          no-useless-escape
+   827:9   warning  'alternateNorCorrect' is not defined                      no-undef
+   852:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   876:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   899:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   910:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   914:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   922:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   930:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   937:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   944:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   948:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   955:5   warning  'alternateNorCorrect' is not defined                      no-undef
+   992:14  warning  'alternateNorCorrect' is not defined                      no-undef
+   994:16  warning  Unnecessary escape character: \"                          no-useless-escape
+   994:27  warning  Unnecessary escape character: \"                          no-useless-escape
+  1018:16  warning  Unnecessary escape character: \"                          no-useless-escape
+  1018:27  warning  Unnecessary escape character: \"                          no-useless-escape
+  1020:16  warning  Unnecessary escape character: \"                          no-useless-escape
+  1020:27  warning  Unnecessary escape character: \"                          no-useless-escape
+  1022:16  warning  Unnecessary escape character: \"                          no-useless-escape
+  1022:41  warning  Unnecessary escape character: \"                          no-useless-escape
+  1022:50  warning  Unnecessary escape character: \"                          no-useless-escape
+  1022:67  warning  Unnecessary escape character: \"                          no-useless-escape
+
+✖ 35 problems (0 errors, 35 warnings)
+
